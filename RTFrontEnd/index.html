@@ -27,7 +27,8 @@ Socket Messages:
     var socket = null;
     
     function sendMessage(){
-        payload = { "action": "onMessage", "message": document.getElementById("messageInput").value };
+        msg = document.getElementById("messageInput").value;
+        payload = { "action": "msg" };
 
         socket.send(JSON.stringify(payload));
     }
