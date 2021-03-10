@@ -28,9 +28,10 @@ Socket Messages:
     
     function sendMessage(){
         msg = document.getElementById("messageInput").value;
-        payload = { "action": "msg" };
+        payload = { "action": msg };
+        str = JSON.stringify(payload); 
 
-        socket.send(JSON.stringify(payload));
+        socket.send(str);
     }
 
     function connectToWebSocket(){
